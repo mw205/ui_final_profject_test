@@ -5,6 +5,8 @@ import 'package:ui_final_project_test/core/themes/styles.dart';
 import 'package:ui_final_project_test/features/home/widgets/categories_list_view.dart';
 import 'package:ui_final_project_test/features/home/widgets/popular_deals_list_view.dart';
 
+import '../explore/views/categories_screen.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -27,9 +29,19 @@ class HomeScreen extends StatelessWidget {
                 'Categories',
                 style: MyStyles.font22BrownW400,
               ),
-              Text(
-                'See All',
-                style: MyStyles.font18OrangeW400,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const CategoriesScreen(),
+                    ),
+                  );
+                },
+                child: Text(
+                  'See All',
+                  style: MyStyles.font18OrangeW400,
+                ),
               ),
             ],
           ),

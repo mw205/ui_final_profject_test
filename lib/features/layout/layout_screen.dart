@@ -3,6 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ui_final_project_test/core/themes/colors.dart';
 import 'package:ui_final_project_test/features/home/home_screen.dart';
 
+import '../account/views/account_screen .dart';
+import '../explore/views/categories_screen.dart';
+
 class LayoutScreen extends StatefulWidget {
   const LayoutScreen({super.key});
 
@@ -13,10 +16,10 @@ class LayoutScreen extends StatefulWidget {
 class _LayoutScreenState extends State<LayoutScreen> {
   List<Widget> screen = [
     const HomeScreen(),
+    const CategoriesScreen(),
     Container(),
     Container(),
-    Container(),
-    Container(),
+    AccountScreen(),
   ];
 
   int currentIndex = 0;
